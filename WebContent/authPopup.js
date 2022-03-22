@@ -29,11 +29,6 @@ function handleResponse(response) {
 
 function signIn() {
 
-    /**
-     * You can pass a custom request object below. This will override the initial configuration. For more information, visit:
-     * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md#request
-     */
-
     myMSALObj.loginPopup(loginRequest)
         .then(handleResponse)
         .catch(error => {
@@ -42,11 +37,6 @@ function signIn() {
 }
 
 function signOut() {
-
-    /**
-     * You can pass a custom request object below. This will override the initial configuration. For more information, visit:
-     * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md#request
-     */
 
     const logoutRequest = {
         account: myMSALObj.getAccountByUsername(username),
@@ -59,12 +49,7 @@ function signOut() {
 
 function getTokenPopup(request) {
 
-    /**
-     * See here for more info on account retrieval: 
-     * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
-     */
     request.account = myMSALObj.getAccountByUsername(username);
-    
     return myMSALObj.acquireTokenSilent(request)
         .catch(error => {
             console.warn("silent token acquisition fails. acquiring token using popup");

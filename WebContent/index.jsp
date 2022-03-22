@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Microsoft identity platform</title>
+  <title>JSP Home Page</title>
   <link rel="SHORTCUT ICON" href="./favicon.svg" type="image/x-icon">
 
   <!-- msal.min.js can be used in the place of msal.js; included msal.js to make debug easy -->
@@ -27,7 +27,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">Microsoft identity platform</a>
+    <a class="navbar-brand" href="/">JSP Home Page</a>
     <div class="btn-group ml-auto dropleft">
       <button type="button" id="SignIn" class="btn btn-secondary" onclick="signIn()">
         Sign In
@@ -35,20 +35,18 @@
     </div>
   </nav>
   <br>
-  <h5 class="card-header text-center">Vanilla JavaScript SPA calling MS Graph API with MSAL.js</h5>
+  <h5 class="card-header text-center">JavaScript SPA with MSAL.js</h5>
   <br>
   <div class="row" style="margin:auto">
     <div id="card-div" class="col-md-3" style="display:none">
       <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title" id="WelcomeMessage">Please sign-in to see your profile and read your mails</h5>
+          <h5 class="card-title" id="WelcomeMessage">Please sign-in to see your profile</h5>
           <div id="profile-div"></div>
           <br>
           <br>
           <button class="btn btn-primary" id="seeProfile" onclick="seeProfile()">See Profile</button>
           <br>
-          <br>
-          <button class="btn btn-primary" id="readMail" onclick="readMail()">Read Mails</button>
         </div>
       </div>
     </div>

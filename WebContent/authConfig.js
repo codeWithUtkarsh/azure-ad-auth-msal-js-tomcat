@@ -2,7 +2,7 @@
  * 
  */
  
-const msalConfig = {
+ const msalConfig = {
     auth: {
         clientId: "4c64d674-eb64-480a-a8fe-17a99b0643ff",
         authority: "https://login.microsoftonline.com/07e373ad-d334-46f4-a926-dd2f68a616c0/",
