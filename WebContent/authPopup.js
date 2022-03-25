@@ -1,7 +1,12 @@
-
-const myMSALObj = new msal.PublicClientApplication(msalConfig);
-
+/**
+ * 
+ */
+let myMSALObj;
 let username = "";
+loadConfig().then(response => {
+    myMSALObj = new msal.PublicClientApplication(response);
+    selectAccount();
+});
 
 function selectAccount() {
 
@@ -63,9 +68,9 @@ function getTokenPopup(request) {
                         console.error(error);
                     });
             } else {
-                console.warn(error);   
+                console.warn(error);
             }
-    });
+        });
 }
 
 function seeProfile() {
@@ -86,4 +91,3 @@ function readMail() {
         });
 }
 
-selectAccount();
